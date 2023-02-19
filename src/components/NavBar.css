@@ -1,0 +1,25 @@
+.navbar-brand {
+    font-weight: 400;
+    font-size: 40px !important;
+    line-height: 78px;
+    background: linear-gradient(180deg, #C04F36 0%, #56362C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-collapse {
+    flex-grow: 0 !important;
+    padding-right: 5rem;
+}
+
+.nav-link {
+    font-weight: 400;
+    font-size: 15px !important;
+    color: #555555 !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+

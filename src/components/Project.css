@@ -1,0 +1,8 @@
+.project-title{
+    font-weight: 700;
+    font-size: 55px ;
+    line-height: 84px;
+    background: linear-gradient(272.63deg, #CC5C5C 83.69%, #EDAD4E 90.56%, #E59D80 101.57%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
