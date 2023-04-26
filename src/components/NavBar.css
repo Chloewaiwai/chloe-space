@@ -2,9 +2,8 @@
     font-weight: 400;
     font-size: 40px !important;
     line-height: 78px;
-    background: linear-gradient(180deg, #C04F36 0%, #56362C 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white !important;
+   
 }
 
 .navbar-collapse {
@@ -15,11 +14,20 @@
 .nav-link {
     font-weight: 400;
     font-size: 15px !important;
-    color: #555555 !important;
+    color: #ffffff !important;
 }
+
+.navbar-link:hover, .navbar-link:target   {
+    color: pink !important;
+    border-bottom: 2px solid;
+    padding-bottom: 2px;
+  }
 
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
 }
 
+.active {
+    color: pink !important;
+  }

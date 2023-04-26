@@ -3,15 +3,20 @@ import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './components/About';
 import Project from './components/Project';
+import Aboutme from './components/Aboutme';
+import Skills from './components/Skills';
+import { Container, Row, Col } from 'react-bootstrap';
+import { useState } from 'react';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
+    <>
       <NavBar />
-      <About />
-      <Project />
-    </div>
+      <Container fluid>
+        <Aboutme />
+        <Project />
+        <Skills />
+      </Container>
+    </>
   );
 }
-
-export default App;

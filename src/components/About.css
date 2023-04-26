@@ -1,48 +1,25 @@
-.about-background{
-    position: absolute;
-    top:0;
-    z-index: -1;
-    width: 100%;
-    height: 120%;
+.btn-danger:hover, .btn-danger:active, .btn:active{
+    background-color: #ce454e;
+    border:none
 }
 
-.myphoto{
-    margin-top: -10%;
-    width: auto;
-    height: 35rem;
+.btn-danger{
+    background-color:#fdb2b7;
+    border:none
 }
 
-
-.padding{
-    padding-top: 3rem;
-}
-
-h1{
-    font-size: 80px;
-    font-weight: 700;
-    color: #FFFFFF;
-}
-
-h2{
-    font-size: 60px;
-    color: #282828;
-}
-
-h4 {
-    padding-top: 2rem;
-    color: #282828;
-}
-
-p{
-    font-size:large;
-}
-
-b{
-    color: #e55050;
-}
-
-.leading-text{
-    font-size: 30px;
-    font-weight: 700;
-    color: #C04F36;
-}
+.arrow-icon {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

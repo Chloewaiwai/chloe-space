@@ -1,8 +1,13 @@
-.project-title{
-    font-weight: 700;
-    font-size: 55px ;
-    line-height: 84px;
-    background: linear-gradient(272.63deg, #CC5C5C 83.69%, #EDAD4E 90.56%, #E59D80 101.57%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.nav-tabs button{
+    border-radius: 10px !important;
+    transition: color .3s ease-in-out,
+    background-color .3s ease-in-out;
+    padding: 10px;
+    
 }
+
+.nav-tabs button:hover{
+    color: #ce454e !important;
+    border-color: transparent !important;
+}
+
