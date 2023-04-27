@@ -1,13 +1,21 @@
 .nav-tabs button{
     border-radius: 10px !important;
-    transition: color .3s ease-in-out,
-    background-color .3s ease-in-out;
+    transition: color .2s ease-in-out,
+    background-color .2s ease-in-out;
     padding: 10px;
-    
+    width:200px;
+    color: #8f8f99 !important;
+}
+
+.nav-tabs .active{
+    background-color: #4e4e58 !important;
+    border-color: transparent !important;
+    color: white !important;
+    font-weight: 600;
 }
 
 .nav-tabs button:hover{
-    color: #ce454e !important;
     border-color: transparent !important;
+    background-color: #4e4e58;
 }
 

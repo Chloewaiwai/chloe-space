@@ -14,8 +14,8 @@ export default function App() {
       <NavBar />
       <Container fluid>
         <Aboutme />
-        <Project />
-        <Skills />
+         <Project />
+        <Skills /> 
       </Container>
     </>
   );

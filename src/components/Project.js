@@ -1,70 +1,58 @@
 import React from 'react'
 import './Project.css'
-import { Tabs, Tab, Card, Button, Row, Col } from 'react-bootstrap';
+import { Tabs, Tab, Card, Button, Row, Col, Container } from 'react-bootstrap';
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from 'react';
+import ProjectsCard from '../props/projectsCard';
+import projects from '../miniDB';
 
 export default function Project() {
+
+  const filter = [
+    {
+      eventKey:"all",
+      title:"All"
+    },{
+      eventKey:"design",
+      title:"Design"
+    },{
+      eventKey:"website",
+      title:"Website"
+    },{
+      eventKey:"project",
+      title:"Project"
+    },
+  ]
   const [activeTab, setActiveTab] = useState('all');
 
   function handleTabSelect(tabName) {
     setActiveTab(tabName);
   }
 
-  const projects = [
-    {
-      title: 'Project 1',
-      type: 'design',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    },
-    {
-      title: 'Project 2',
-      type: 'website',
-      description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.'
-    },
-    {
-      title: 'Project 3',
-      type: 'drawings',
-      description: 'Suspendisse ac enim euismod, bibendum ex eget, molestie justo.'
-    },
-    {
-      title: 'Project 4',
-      type: 'design',
-      description: 'Nam consectetur orci non sapien tristique, nec bibendum nunc semper.'
-    },
-    {
-      title: 'Project 5',
-      type: 'website',
-      description: 'Fusce convallis eros sit amet odio sagittis, vel eleifend tortor convallis.'
-    },
-    {
-      title: 'Project 6',
-      type: 'drawings',
-      description: 'Integer bibendum ipsum a velit tristique, eu sagittis ligula bibendum.'
-    }
-  ];
   return (
-    <Row id="projects" style={{ height: '100vh' , flexDirection:"column", justifyContent: "center", alignItems: "center" }}>
-    <Col style={{ backgroundColor: '#323239', flex:1 , paddingTop:100 }}>
-      <Tabs activeKey={activeTab} onSelect={handleTabSelect} style={{ justifyContent: "center", border:"none" }}>
-        <Tab eventKey="all" title="All"></Tab>
-        <Tab eventKey="design" title="Design"></Tab>
-        <Tab eventKey="website" title="Website"></Tab>
-        <Tab eventKey="drawings" title="Drawings"></Tab>
-      </Tabs>
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: "center", alignItems: "center" }}>
-        {projects
-          .filter((project) => activeTab === 'all' || project.type === activeTab)
-          .map((project, index) => (
-            <Card key={index} style={{ width: '18rem', margin: '1rem' }}>
-              <Card.Body>
-                <Card.Title>{project.title}</Card.Title>
-                <Card.Text>{project.description}</Card.Text>
-                <Button variant="primary">View Details</Button>
-              </Card.Body>
-            </Card>
-          ))}
-      </div>
-    </Col>
-  </Row>
+    <Row id="work" style={{ minHeight: '100vh' , flexDirection:"column",alignItems: "center" }}>
+      <Col style={{ backgroundColor: '#4e4e58', flex:1 , paddingTop:120}}>
+        <Container style={{ backgroundColor:"#323239", width:"66%", borderRadius:10, padding:5}}>
+          <Tabs activeKey={activeTab} onSelect={handleTabSelect} style={{ justifyContent: "center", border:"none",gap:5 }}>
+            {filter.map((tab, index) => (
+              <Tab eventKey={tab.eventKey} title={tab.title} key={index}></Tab>
+            ))}
+          </Tabs>
+        </Container>
+        <Container>
+        <motion.div 
+        layout 
+        style={{ display: 'flex', flexWrap: 'wrap', justifyContent: "center", alignItems: "center", gap:10, paddingTop:20 , paddingBottom:30}}>
+        <AnimatePresence>
+            {projects
+                .filter((project) => activeTab === "all" || project.type === activeTab)
+                .map((project) => {
+                  return <ProjectsCard key={project.id} project={project}/>
+                })}
+            </AnimatePresence>
+        </motion.div >
+        </Container>
+      </Col>
+    </Row>
   )
 }
