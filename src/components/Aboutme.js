@@ -17,15 +17,15 @@ export default function Aboutme() {
       <Row id="about" style={{ height: '100vh' , flexDirection:"column"}}>
         <Col style={{ backgroundColor: '#323239', flex:1 , paddingTop:50 }}>
           <Container style={{ height: '100%' }}>
-            <Row className="justify-content-md-center" style={{ height: '100%', alignItems: 'center'}}>
-              <Col xs={12} md={6} style={{ display: 'flex', justifyContent: 'flex-end', flexDirection: 'column', alignItems: 'flex-end', borderRight: 'solid', paddingRight:20 }}>
+            <Row className="justify-content-md-center about-row" style={{ height: '100%', alignItems: 'center'}}>
+              <Col xs={12} md={6} className='about-text' style={{ display: 'flex', justifyContent: 'flex-end', flexDirection: 'column', alignItems: 'flex-end', borderRight: 'solid', paddingRight:20 }}>
                 <h2>
                   Here's <span style={{ color: '#fdb2b7' }}>Chloe Yip</span> !
                 </h2>
                 <p>A Frontend Developer, AI Developer, 3D model designer</p>
                 <Button onClick={handleDownload} variant="danger">Download CV</Button>
               </Col>
-              <Col xs={12} md={6} style={{ paddingLeft:20}}>
+              <Col xs={12} md={6} style={{ paddingLeft:20}} className='about-img'>
                 <Image src={process.env.PUBLIC_URL + '/me.png'} alt="chloe's icon" roundedCircle fluid style={{ width: '70%', height: 'auto' }} />
               </Col>
             </Row>

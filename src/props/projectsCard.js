@@ -10,6 +10,7 @@ export default function ProjectsCard({project}) {
         initial={{opacity:0, scale:0}}
         exit={{opacity:0, scale:0}}>
         <Card
+            className='projectCard'
             style={{
                 width: project.width === "long" ? "35rem" : "25rem",
                 height:"13rem",

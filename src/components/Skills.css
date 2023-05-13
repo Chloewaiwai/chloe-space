@@ -5,3 +5,18 @@
 .progress {
     background-color: #4e4e58;
 }
+
+.left-svg {
+    width: 100%;
+  }
+  
+  @media (max-width: 992px) {
+      .left-svg {
+        width: 50%;
+      }
+
+      .skill-container{
+        margin-top: 30px;
+      }
+
+    }

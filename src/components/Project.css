@@ -19,3 +19,34 @@
     background-color: #4e4e58;
 }
 
+@media (max-width: 1200px){
+    .projectCard {
+        width: 35rem !important;
+       }
+}
+
+@media (max-width: 768px){
+    .projectCard {
+        width: 23rem !important;
+        height: 20rem !important;
+       }
+    
+    .hstack {
+        flex-direction: column;
+    }
+
+    .hstack .container{
+        height: 50% !important;
+    }
+
+    .vstack {
+        align-items: center;
+    }
+
+    .card-text {
+        text-align: center;
+    }
+
+}
+
+
