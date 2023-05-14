@@ -2,7 +2,7 @@
   "name": "home-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Chloewaiwai.github.io/react-home-page",
+  "homepage": "http://Chloewaiwai.github.io/chloe-space",
   "dependencies": {
     "@splinetool/react-spline": "^2.2.5",
     "@splinetool/runtime": "^0.9.210",
