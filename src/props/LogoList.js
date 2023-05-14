@@ -67,33 +67,26 @@ export default function LogoList({type}) {
 
     const filteredLogo = logo.filter(item => item.type === type);
 
-    console.log(logo)
-    console.log(type)
-
     return (
-        <div style={{display:"flex"}}>
-            {filteredLogo.map((item, index) => 
-                <>
-                {item.type === "frontend" && 
-                    <SkillsLogo index={index} item={item} />
-                }
-                {item.type === "software" && 
-                    <SkillsLogo index={index} item={item} />
-                }
-                {item.type === "ai" && 
-                    <SkillsTag index={index} item={item} />
-                }
-                {item.type === "design" && 
+        <div style={{ display: "flex" }}>
+            {filteredLogo.map((item, index) => {
+            switch (item.type) {
+                case "frontend":
+                case "software":
+                return <SkillsLogo index={index} item={item} />;
+                case "ai":
+                return <SkillsTag index={index} item={item} />;
+                case "design":
+                return (
                     <>
-                    {item.title && 
-                        <SkillsTag index={index} item={item} />
-                    }
-                    {item.src && 
-                        <SkillsLogo index={index} item={item} />
-                    }
+                    {item.title && <SkillsTag index={index} item={item} />}
+                    {item.src && <SkillsLogo index={index} item={item} />}
                     </>
-                }</>
-            )}
+                );
+                default:
+                return null;
+            }
+            })}
         </div>
     )
 }
