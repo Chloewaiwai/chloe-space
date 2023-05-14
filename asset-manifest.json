@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-home-page/static/css/main.8b1d52fd.css",
-    "main.js": "/react-home-page/static/js/main.ee2b23ec.js",
-    "static/media/littlegirl.svg": "/react-home-page/static/media/littlegirl.651585451d451c21ab237762bc92da57.svg",
-    "index.html": "/react-home-page/index.html",
-    "main.8b1d52fd.css.map": "/react-home-page/static/css/main.8b1d52fd.css.map",
-    "main.ee2b23ec.js.map": "/react-home-page/static/js/main.ee2b23ec.js.map"
+    "main.css": "/chloe-space/static/css/main.682c9d22.css",
+    "main.js": "/chloe-space/static/js/main.7f7bd136.js",
+    "static/media/littlegirl.svg": "/chloe-space/static/media/littlegirl.651585451d451c21ab237762bc92da57.svg",
+    "index.html": "/chloe-space/index.html",
+    "main.682c9d22.css.map": "/chloe-space/static/css/main.682c9d22.css.map",
+    "main.7f7bd136.js.map": "/chloe-space/static/js/main.7f7bd136.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b1d52fd.css",
-    "static/js/main.ee2b23ec.js"
+    "static/css/main.682c9d22.css",
+    "static/js/main.7f7bd136.js"
   ]
 }
