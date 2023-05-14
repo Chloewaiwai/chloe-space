@@ -40,17 +40,17 @@ export default function Project() {
           </Tabs>
         </Container>
         <Container>
-        <motion.div 
-        layout 
-        style={{ display: 'flex', flexWrap: 'wrap', justifyContent: "center", alignItems: "center", gap:10, paddingTop:20 , paddingBottom:30}}>
-        <AnimatePresence>
-            {projects
-                .filter((project) => activeTab === "all" || project.type === activeTab)
-                .map((project) => {
-                  return <ProjectsCard key={project.id} project={project}/>
-                })}
-            </AnimatePresence>
-        </motion.div >
+          <motion.div 
+            layout 
+            style={{ display: 'flex', flexWrap: 'wrap', justifyContent: "center", alignItems: "center", gap:10, paddingTop:20 , paddingBottom:30}}>
+          <AnimatePresence>
+              {projects
+                  .filter((project) => activeTab === "all" || project.type === activeTab)
+                  .map((project) => {
+                    return <ProjectsCard key={project.id} project={project}/>
+                  })}
+              </AnimatePresence>
+          </motion.div >
         </Container>
       </Col>
     </Row>

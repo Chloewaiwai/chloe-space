@@ -1,4 +1,4 @@
-.btn-danger:hover; .btn-danger:active; .btn:active{
+.btn-danger:hover, .btn-danger:active, .btn:active{
     background-color: #ce454e;
     border:none
 }
@@ -30,12 +30,20 @@
     flex-direction: column; 
     align-items: flex-end; 
     border-right: solid; 
-    padding-right:20px
+    padding-right:20px;
+  }
+
+  .about-section {
+    background-color: #323239;
+    padding-top:50px;
+    width :100% ;
+    display: flex;
+    align-items: center;
   }
 
   @media (max-width: 500px){
     .about-text p{
-      font-size: 15px;
+      font-size: 12px;
     }
 }
 
@@ -46,7 +54,8 @@
       border-bottom: solid;
       padding-bottom: 30px;
       margin-bottom: 30px;
-      margin-top: 100px;
+      margin-top: 50px;
+      width: 90%;
       
     }
 

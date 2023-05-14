@@ -1,5 +1,7 @@
 import React from 'react'
 import { Container, Image} from 'react-bootstrap';
+import SkillsLogo from './SkillsLogo';
+import SkillsTag from './SkillsTag';
 
 export default function LogoList({type}) {
 
@@ -73,40 +75,21 @@ export default function LogoList({type}) {
             {filteredLogo.map((item, index) => 
                 <>
                 {item.type === "frontend" && 
-                    <Image 
-                        key={index}
-                        src={process.env.PUBLIC_URL + item.src} 
-                        alt={item.alt} 
-                        roundedCircle fluid 
-                        style={{ width: 25, marginRight:10}} />
+                    <SkillsLogo index={index} item={item} />
                 }
                 {item.type === "software" && 
-                    <Image 
-                        key={index}
-                        src={process.env.PUBLIC_URL + item.src} 
-                        alt={item.alt} 
-                        roundedCircle fluid 
-                        style={{ width: 25, marginRight:10}} />
+                    <SkillsLogo index={index} item={item} />
                 }
                 {item.type === "ai" && 
-                    <div key={index} style={{backgroundColor:"white", marginRight:5, borderRadius:5, width:100, padding:2}}>
-                        <p style={{color:"black", marginBottom:0, textAlign:"center", fontSize:10}}>{item.title}</p>
-                    </div>
+                    <SkillsTag index={index} item={item} />
                 }
                 {item.type === "design" && 
                     <>
                     {item.title && 
-                        <div key={index} style={{backgroundColor:"white", marginRight:5, borderRadius:5, width:100, padding:2}}>
-                            <p style={{color:"black", marginBottom:0, textAlign:"center", fontSize:10}}>{item.title}</p>
-                        </div>
+                        <SkillsTag index={index} item={item} />
                     }
                     {item.src && 
-                        <Image 
-                        key={index}
-                        src={process.env.PUBLIC_URL + item.src} 
-                        alt={item.alt} 
-                        roundedCircle fluid 
-                        style={{ width: 25, marginRight:10}} />
+                        <SkillsLogo index={index} item={item} />
                     }
                     </>
                 }</>
