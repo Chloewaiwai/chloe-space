@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-home-page/static/css/main.8b1d52fd.css",
+    "main.js": "/react-home-page/static/js/main.7c7b8330.js",
+    "static/media/littlegirl.svg": "/react-home-page/static/media/littlegirl.651585451d451c21ab237762bc92da57.svg",
+    "index.html": "/react-home-page/index.html",
+    "main.8b1d52fd.css.map": "/react-home-page/static/css/main.8b1d52fd.css.map",
+    "main.7c7b8330.js.map": "/react-home-page/static/js/main.7c7b8330.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b1d52fd.css",
+    "static/js/main.7c7b8330.js"
+  ]
+}
