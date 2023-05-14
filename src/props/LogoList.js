@@ -6,39 +6,39 @@ export default function LogoList({type}) {
     const logo = [
         {
             type: "frontend",
-            src: './html-5.png',
+            src: '/html-5.png',
             alt: 'html'
         },{
             type: "frontend",
-            src: './css-3.png',
+            src: '/css-3.png',
             alt: 'css'
         },{
             type: "frontend",
-            src: './js.png',
+            src: '/js.png',
             alt: 'js'
         },{
             type: "frontend",
-            src: './atom.png',
+            src: '/atom.png',
             alt: 'react'
         },{
             type: "frontend",
-            src: './php.png',
+            src: '/php.png',
             alt: 'php'
         },{
             type: "frontend",
-            src: './bootstrap.png',
+            src: '/bootstrap.png',
             alt: 'bootstrap'
         },{
             type: "software",
-            src: './python.png',
+            src: '/python.png',
             alt: 'python'
         },{
             type: "software",
-            src: './sql-server.png',
+            src: '/sql-server.png',
             alt: 'sql'
         },{
             type: "software",
-            src: './java.png',
+            src: '/java.png',
             alt: 'java'
         },{
             type: "ai",
@@ -51,11 +51,11 @@ export default function LogoList({type}) {
             title: 'NLP'
         },{
             type: "design",
-            src: './photoshop.png',
+            src: '/photoshop.png',
             alt: "photoshop"
         },{
             type: "design",
-            src: './illustrator.png',
+            src: '/illustrator.png',
             alt: "illustrator"
         },{
             type: "design",
