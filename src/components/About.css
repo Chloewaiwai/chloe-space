@@ -41,6 +41,19 @@
     align-items: center;
   }
 
+  /* Reveal animation */
+
+  .fade-in {
+    animation: fade-in 1s ease;
+  }
+  
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* responsive website */
+
   @media (max-width: 500px){
     .about-text p{
       font-size: 12px;

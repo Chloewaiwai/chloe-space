@@ -4,8 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Project from './components/Project';
 import Aboutme from './components/Aboutme';
 import Skills from './components/Skills';
-import { Container, Row, Col } from 'react-bootstrap';
-import { useState } from 'react';
+import { Container } from 'react-bootstrap';
 
 export default function App() {
   return (

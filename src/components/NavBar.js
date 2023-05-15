@@ -1,8 +1,7 @@
-import React from 'react'
-import { Nav,Navbar,Container } from 'react-bootstrap'; 
+import React from 'react';
+import { Nav, Navbar, Container } from 'react-bootstrap';
+import { Link } from 'react-scroll';
 import './NavBar.css';
-import { useEffect,useState } from 'react';
-
 
 export default function NavBar() {
   return (
@@ -12,12 +11,36 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-              <Nav.Link className="navbar-link" href="#about">About</Nav.Link>
-              <Nav.Link className="navbar-link" href="#work">Work</Nav.Link>
-              <Nav.Link className="navbar-link" href="#skills">Skills</Nav.Link>
+            <Link
+              className="navbar-link nav-link"
+              to="about"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              About
+            </Link>
+            <Link
+              className="navbar-link nav-link"
+              to="work"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              Work
+            </Link>
+            <Link
+              className="navbar-link nav-link"
+              to="skills"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              Skills
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  )
+  );
 }

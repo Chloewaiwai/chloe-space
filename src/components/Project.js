@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
 import './Project.css'
-import { Tabs, Tab, Card, Button, Row, Col, Container } from 'react-bootstrap';
+import { Tabs, Tab, Row, Col, Container } from 'react-bootstrap';
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from 'react';
 import ProjectsCard from '../props/projectsCard';
@@ -29,10 +30,24 @@ export default function Project() {
     setActiveTab(tabName);
   }
 
+  const tabRef = useRef(null);
+
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: 'top',
+      duration: 1000,
+      distance: '30px',
+      easing: 'ease-out',
+      reset: true,
+    });
+
+    sr.reveal(tabRef.current);
+  }, []);
+
   return (
     <Row id="work" style={{ minHeight: '100vh' , flexDirection:"column",alignItems: "center" }}>
       <Col style={{ backgroundColor: '#4e4e58', flex:1 , paddingTop:120}}>
-        <Container style={{ backgroundColor:"#323239", width:"66%", borderRadius:10, padding:5}}>
+        <Container style={{ backgroundColor:"#323239", width:"66%", borderRadius:10, padding:5}} ref={tabRef}>
           <Tabs activeKey={activeTab} onSelect={handleTabSelect} style={{ justifyContent: "center", border:"none",gap:5 }}>
             {filter.map((tab, index) => (
               <Tab eventKey={tab.eventKey} title={tab.title} key={index}></Tab>

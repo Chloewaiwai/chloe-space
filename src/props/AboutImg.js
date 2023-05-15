@@ -9,7 +9,7 @@ export default function AboutImg() {
         alt="chloe's icon"
         roundedCircle
         fluid
-        style={{ width: '50%', height: 'auto' }}
+        style={{ width: '50%', height: 'auto'}}
     />
   )
 }

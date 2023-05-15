@@ -1,5 +1,4 @@
 import React from 'react'
-import { Image } from 'react-bootstrap';
 
 export default function SkillsTag({index, item}) {
   return (

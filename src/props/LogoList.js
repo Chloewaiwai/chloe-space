@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container, Image} from 'react-bootstrap';
 import SkillsLogo from './SkillsLogo';
 import SkillsTag from './SkillsTag';
 

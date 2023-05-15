@@ -1,5 +1,6 @@
-import React from 'react'
-import { Stack, Row, Col, ProgressBar, Container, Image } from 'react-bootstrap';
+import React, { useRef, useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
+import { Stack, Row, Col, ProgressBar, Container} from 'react-bootstrap';
 import { ReactComponent as LeftSvg } from './littlegirl.svg';
 import LogoList from '../props/LogoList';
 import './Skills.css'; 
@@ -24,14 +25,30 @@ export default function Skills() {
       bar: 50
     }
   ]
+
+  const imgRef = useRef(null);
+  const progressRef = useRef(null);
+
+  useEffect(() => {
+    const sr = ScrollReveal({
+      duration: 2000,
+      distance: '30px',
+      easing: 'ease-out',
+      reset: true,
+    });
+
+    sr.reveal(imgRef.current, { origin: 'right' });
+    sr.reveal(progressRef.current, { origin: 'left', delay: 200 });
+  }, []);
+
   return (
     <Row id="skills" style={{ height: '100vh' , flexDirection:"column" }}>
       <Col style={{ backgroundColor: 'rgb(50, 50, 57)', justifyContent:"center"}}>
         <Container className='skill-container' style={{ width:"70%", height:"100%", borderRadius:10, padding:5, display:"flex", flexDirection:"row", alignItems:"center", flexWrap:"wrap", alignContent:"center"}}>
-          <Col xs={12} md={12} lg={5} style={{display:"flex", justifyContent:"center"}}>
+          <Col xs={12} md={12} lg={5} style={{display:"flex", justifyContent:"center"}} ref={imgRef}>
             <LeftSvg className='left-svg'/>
           </Col>
-          <Col xs={12} md={12} lg={7}>
+          <Col xs={12} md={12} lg={7} ref={progressRef}>
             <h3 style={{paddingBottom:15}}>Skills</h3>
             {skillsList.map((item) => 
               <>

@@ -1,22 +1,37 @@
-import React from 'react'
-import { Tabs, Tab, Card, Button, Row, Col, Container, Stack } from 'react-bootstrap';
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
+import { Card, Container, Stack } from 'react-bootstrap';
+import { motion} from "framer-motion";
 
 export default function ProjectsCard({project}) {
+    const cardRef = useRef(null);
+
+    useEffect(() => {
+        const sr = ScrollReveal({
+        origin: 'top',
+        duration: 1000,
+        distance: '30px',
+        easing: 'ease-out',
+        reset: true,
+        });
+
+        sr.reveal(cardRef.current, { delay: 300 });
+    }, []);
+
   return (
     <motion.div layout 
         animate={{opacity:1, scale: 1}}
         initial={{opacity:0, scale:0}}
-        exit={{opacity:0, scale:0}}>
+        exit={{opacity:0, scale:0}}
+        >
         <Card
             className='projectCard'
             style={{
                 width: project.width === "long" ? "35rem" : "25rem",
                 height:"13rem",
                 backgroundColor:"white",
-                overflow:"hidden"
-            }}>
+                overflow:"hidden"}}
+            ref={cardRef}>
             <Card.Body style={{height:"100%"}}>
                 <Stack direction="horizontal" style={{height:"100%"}}>
                 {project.img && 

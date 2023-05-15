@@ -3,30 +3,33 @@
     font-size: 40px !important;
     line-height: 78px;
     color: white !important;
-}
-
-.navbar-collapse {
+  }
+  
+  .navbar-collapse {
     flex-grow: 0 !important;
     padding-right: 5rem;
-}
-
-.nav-link {
+  }
+  
+  .nav-link {
     font-weight: 400;
     font-size: 15px !important;
     color: #ffffff !important;
-}
-
-.navbar-link:hover, .navbar-link:target   {
+    cursor: pointer;
+  }
+  
+  .navbar-link:hover,
+  .navbar-link:target,
+  .navbar-link.active {
     color: pink !important;
     border-bottom: 2px solid;
     padding-bottom: 2px;
   }
-
-.navbar-expand-lg .navbar-nav .nav-link {
+  
+  .navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
-}
-
-.active {
+  }
+  
+  .active {
     color: pink !important;
   }
