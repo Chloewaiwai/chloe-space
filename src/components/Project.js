@@ -24,6 +24,7 @@ export default function Project() {
       title:"Project"
     },
   ]
+  
   const [activeTab, setActiveTab] = useState('all');
 
   function handleTabSelect(tabName) {
@@ -31,17 +32,17 @@ export default function Project() {
   }
 
   const tabRef = useRef(null);
+  const cardRef = useRef(null)
 
   useEffect(() => {
     const sr = ScrollReveal({
       origin: 'top',
       duration: 1000,
-      distance: '30px',
-      easing: 'ease-out',
-      reset: true,
+      distance: '30px'
     });
 
     sr.reveal(tabRef.current);
+    sr.reveal(cardRef.current);
   }, []);
 
   return (
@@ -54,7 +55,7 @@ export default function Project() {
             ))}
           </Tabs>
         </Container>
-        <Container>
+        <Container ref={cardRef}>
           <motion.div 
             layout 
             style={{ display: 'flex', flexWrap: 'wrap', justifyContent: "center", alignItems: "center", gap:10, paddingTop:20 , paddingBottom:30}}>

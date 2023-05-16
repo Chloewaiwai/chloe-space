@@ -10,19 +10,19 @@ export default function Skills() {
     {
       title: "Frontend Web Development",
       list: "frontend",
-      bar: 80
+      bar: 89
     },{
       title: "Software Development",
       list: "software",
-      bar: 60
+      bar: 76
     },{
       title: "AI Model Development",
       list: "ai",
-      bar: 40
+      bar: 58
     },{
       title: "Design",
       list: "design",
-      bar: 50
+      bar: 54
     }
   ]
 
@@ -42,8 +42,8 @@ export default function Skills() {
   }, []);
 
   return (
-    <Row id="skills" style={{ height: '100vh' , flexDirection:"column" }}>
-      <Col style={{ backgroundColor: 'rgb(50, 50, 57)', justifyContent:"center"}}>
+    <Row id="skills" style={{ minHeight: '100vh' , flexDirection:"column"}}>
+      <Col style={{ backgroundColor: 'rgb(50, 50, 57)', justifyContent:"center", height: '100%', display: 'flex', alignItems: 'center'}}>
         <Container className='skill-container' style={{ width:"70%", height:"100%", borderRadius:10, padding:5, display:"flex", flexDirection:"row", alignItems:"center", flexWrap:"wrap", alignContent:"center"}}>
           <Col xs={12} md={12} lg={5} style={{display:"flex", justifyContent:"center"}} ref={imgRef}>
             <LeftSvg className='left-svg'/>

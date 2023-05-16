@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://Chloewaiwai.github.io/chloe-space",
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@splinetool/react-spline": "^2.2.5",
     "@splinetool/runtime": "^0.9.210",
     "@testing-library/jest-dom": "^5.16.5",

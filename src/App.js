@@ -1,10 +1,12 @@
 import './App.css';
+import { Container } from 'react-bootstrap';
 import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Project from './components/Project';
 import Aboutme from './components/Aboutme';
 import Skills from './components/Skills';
-import { Container } from 'react-bootstrap';
+import Contact from './components/Contact';
+
 
 export default function App() {
   return (
@@ -12,8 +14,9 @@ export default function App() {
       <NavBar />
       <Container fluid>
         <Aboutme />
-         <Project />
+        <Project />
         <Skills /> 
+        <Contact />
       </Container>
     </>
   );

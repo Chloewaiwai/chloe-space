@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import './NavBar.css';
 
 export default function NavBar() {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleLinkClick = () => {
+    setExpanded(false);
+  };
+
   return (
-    <Navbar expand="lg" fixed="top" variant="dark">
+    <Navbar expand="lg" fixed="top" variant="dark" style={{backgroundColor:"#323239"}} expanded={expanded}>
       <Container>
-        <Navbar.Brand href="/">Chloe's Space</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Brand href="/chloe-space">Chloe's Space</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Link
@@ -17,6 +23,7 @@ export default function NavBar() {
               spy={true}
               smooth={true}
               duration={500}
+              onClick={handleLinkClick}
             >
               About
             </Link>
@@ -26,6 +33,7 @@ export default function NavBar() {
               spy={true}
               smooth={true}
               duration={500}
+              onClick={handleLinkClick}
             >
               Work
             </Link>
@@ -35,8 +43,19 @@ export default function NavBar() {
               spy={true}
               smooth={true}
               duration={500}
+              onClick={handleLinkClick}
             >
               Skills
+            </Link>
+            <Link
+              className="navbar-link nav-link"
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+              onClick={handleLinkClick}
+            >
+              Contact Me
             </Link>
           </Nav>
         </Navbar.Collapse>
