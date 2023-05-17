@@ -5,6 +5,11 @@
   "homepage": "http://Chloewaiwai.github.io/chloe-space",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@splinetool/react-spline": "^2.2.5",
     "@splinetool/runtime": "^0.9.210",
     "@testing-library/jest-dom": "^5.16.5",

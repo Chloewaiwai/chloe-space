@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Container, Form, Button } from 'react-bootstrap';
+import { Container, Form, Button, Row, Col } from 'react-bootstrap';
 import emailjs from '@emailjs/browser'
 
 export default function ContactForm() {
     const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [name, setname] = useState('');
   const [companyName, setCompanyName] = useState('');
   const [phoneNo, setPhoneNo] = useState('');
   const [email, setEmail] = useState('');
@@ -12,17 +12,14 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', firstName, lastName, companyName, phoneNo, email, message);
-
+    console.log('Form submitted:', firstName, name, companyName, phoneNo, email, message);
     // Send email using EmailJS service
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+    emailjs.send("service_5tia4vn","template_a4tezk3",{
       message: message,
       company_name: companyName,
-      last_name: lastName,
-      first_name: firstName,
-      phone_no: phoneNo,
+      name: name,
       email: email,
-    }, 'YOUR_USER_ID')
+    }, 'D-QQbd_W--pU1W85A')
       .then((result) => {
         console.log('Email sent:', result.text);
         alert('Your message has been sent.');
@@ -33,43 +30,37 @@ export default function ContactForm() {
 
     // Reset form fields
     setFirstName('');
-    setLastName('');
+    setname('');
     setCompanyName('');
     setPhoneNo('');
     setEmail('');
     setMessage('');
   };
   return (
-    
-            <Container className='contact-form'>
-                <h1>Contact Me</h1>
       <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="formFirstName">
-          <Form.Label>First Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter your first name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
-        </Form.Group>
-        <Form.Group controlId="formLastName">
-          <Form.Label>Last Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter your last name" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
-        </Form.Group>
-        <Form.Group controlId="formCompanyName">
-          <Form.Label>Company Name</Form.Label>
+        <Row>
+          <Col>
+            <Form.Group controlId="formname" className='field'> 
+                <Form.Label>Your Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter your name" value={name} onChange={(e) => setname(e.target.value)} required />
+            </Form.Group>
+          </Col>
+          <Col>
+          <Form.Group controlId="formEmail" className='field'>
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          </Form.Group>
+          </Col>
+        </Row>
+        <Form.Group controlId="formCompanyName" className='field'>
+          <Form.Label>Your Company</Form.Label>
           <Form.Control type="text" placeholder="Enter your company name" value={companyName} onChange={(e) => setCompanyName(e.target.value)} required />
         </Form.Group>
-        <Form.Group controlId="formPhoneNo">
-          <Form.Label>Phone Number</Form.Label>
-          <Form.Control type="tel" placeholder="Enter your phone number" value={phoneNo} onChange={(e) => setPhoneNo(e.target.value)} required />
-        </Form.Group>
-        <Form.Group controlId="formEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </Form.Group>
-        <Form.Group controlId="formMessage">
+        <Form.Group controlId="formMessage" className='field'>
           <Form.Label>Message</Form.Label>
-          <Form.Control as="textarea" rows={5} placeholder="Enter your message" value={message} onChange={(e) => setMessage(e.target.value)} required />
+          <Form.Control className='message-box' as="textarea" rows={5} placeholder="Enter your message" value={message} onChange={(e) => setMessage(e.target.value)} required />
         </Form.Group>
-        <Button type="submit">Send Message</Button>
+        <Button type="submit" variant="danger">Send Message</Button>
       </Form>
-            </Container>
   );
 }
