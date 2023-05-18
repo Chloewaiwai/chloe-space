@@ -48,9 +48,9 @@
   }
 
   .form-control {
-    background-color: transparent;
+    background-color: transparent !important;
     border: none;
-    color: white;
+    color: white !important;
     border-bottom: 1px solid;
     border-radius: 0;
     line-height: 1.5;
@@ -58,7 +58,7 @@
   }
 
   .form-control:focus{
-    color: white;
+    color: white !important;
     border: none;
     box-shadow: none;
     background-color: transparent;
