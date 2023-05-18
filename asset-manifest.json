@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/chloe-space/static/css/main.ae6a4310.css",
-    "main.js": "/chloe-space/static/js/main.99501959.js",
+    "main.css": "/chloe-space/static/css/main.b86dbacb.css",
+    "main.js": "/chloe-space/static/js/main.84d306ec.js",
     "static/media/littlegirl.svg": "/chloe-space/static/media/littlegirl.651585451d451c21ab237762bc92da57.svg",
     "index.html": "/chloe-space/index.html",
-    "main.ae6a4310.css.map": "/chloe-space/static/css/main.ae6a4310.css.map",
-    "main.99501959.js.map": "/chloe-space/static/js/main.99501959.js.map"
+    "main.b86dbacb.css.map": "/chloe-space/static/css/main.b86dbacb.css.map",
+    "main.84d306ec.js.map": "/chloe-space/static/js/main.84d306ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae6a4310.css",
-    "static/js/main.99501959.js"
+    "static/css/main.b86dbacb.css",
+    "static/js/main.84d306ec.js"
   ]
 }
