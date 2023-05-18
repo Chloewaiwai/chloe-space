@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import ScrollReveal from 'scrollreveal';
 import { Button } from 'react-bootstrap';
 
-export default function MyComponent({ isSmallScreen, handleDownload }) {
+export default function AboutText() {
   const h2Ref = useRef(null);
   const p1Ref = useRef(null);
   const p2Ref = useRef(null);
@@ -29,6 +29,16 @@ export default function MyComponent({ isSmallScreen, handleDownload }) {
       sr.reveal(buttonRef.current, { delay: 600 });
     }
   }, []);
+
+  function handleDownload() {
+    const link = document.createElement('a');
+    link.href = process.env.PUBLIC_URL + '/ChloeYip_CV(Resume).pdf';
+    link.target = '_blank';
+    link.download = 'ChloeYip_CV(Resume).pdf';
+    link.click();
+  }
+
+  const isSmallScreen = window.innerWidth <= 500;
 
   return (
     <>

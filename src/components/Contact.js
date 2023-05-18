@@ -1,10 +1,7 @@
 import './Contact.css';
 import ContactForm from '../props/ContactForm';
+import MyInfo from '../props/MyInfo';
 import { Container, Row, Col, Image} from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
 
 export default function Contact() {
   return (
@@ -14,29 +11,19 @@ export default function Contact() {
             <div className="circle circle-one"></div>
             <div className="circle circle-two"></div>
             {/* <h1 className="contact-text">Contact Me</h1> */}
-            <Container className='contact-form'>
-              <Row>
-                <Col md={8} ><ContactForm /></Col>
-                <Col></Col>
-              </Row>
-            </Container>
-            <div className='my-info'>
-              <Row style={{marginBottom:20, alignItems:"center"}}>
-                <Col md={2} style={{display:"flex", justifyContent:"center"}}><FontAwesomeIcon icon={faEnvelope} size="xl" style={{color: "#323239",}} />
-                </Col>
-                <Col style={{color: "#323239"}}>chloe.yippw@gmail.com</Col>  
-              </Row>
-              <Row style={{marginBottom:20, alignItems:"center"}}>
-                <Col md={2} style={{display:"flex", justifyContent:"center"}}><FontAwesomeIcon icon={faGithub} size="xl" style={{color: "#323239",}} />
-                </Col>
-                <Col style={{color: "#323239"}}>Chloewaiwai</Col>
-              </Row>
-              <Row style={{marginBottom:20, alignItems:"center"}}>
-                <Col md={2} style={{display:"flex", justifyContent:"center"}}><FontAwesomeIcon icon={faLinkedin} size="xl" style={{color: "#323239",}} />
-                </Col>
-                <Col style={{color: "#323239"}}>Yip Chloe</Col>
-              </Row>
-            </div>
+            <Row className='container-wrapper'>
+              <Col style={{display:"flex", justifyContent:"center"}}>
+                <MyInfo />
+              </Col>
+              <Col>
+                <Container className='contact-form'>
+                  <Row>
+                    <Col md={8} ><ContactForm /></Col>
+                    <Col></Col>
+                  </Row>
+                </Container>
+              </Col>
+            </Row>
         </Col>
     </Row>
   );
