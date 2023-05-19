@@ -30,6 +30,9 @@ export default function LogoList({type}) {
             src: '/bootstrap.png',
             alt: 'bootstrap'
         },{
+            type: "frontend",
+            title: 'Next.js'
+        },{
             type: "software",
             src: '/python.png',
             alt: 'python'
@@ -60,6 +63,10 @@ export default function LogoList({type}) {
             alt: "illustrator"
         },{
             type: "design",
+            src: '/figma.png',
+            alt: "Figma"
+        },{
+            type: "design",
             title: "Blender"
         }
     ]
@@ -71,21 +78,28 @@ export default function LogoList({type}) {
             {filteredLogo.map((item, index) => {
             switch (item.type) {
                 case "frontend":
+                    return (
+                        <>
+                        {item.title && <SkillsTag index={index} item={item} />}
+                        {item.src && <SkillsLogo index={index} item={item} />}
+                        </>
+                    );
                 case "software":
-                return <SkillsLogo index={index} item={item} />;
+                    return <SkillsLogo index={index} item={item} />;
                 case "ai":
-                return <SkillsTag index={index} item={item} />;
+                    return <SkillsTag index={index} item={item} />;
                 case "design":
-                return (
-                    <>
-                    {item.title && <SkillsTag index={index} item={item} />}
-                    {item.src && <SkillsLogo index={index} item={item} />}
-                    </>
-                );
-                default:
-                return null;
+                    return (
+                        <>
+                        {item.title && <SkillsTag index={index} item={item} />}
+                        {item.src && <SkillsLogo index={index} item={item} />}
+                        </>
+                    );
+                    default:
+                    return null;
             }
             })}
         </div>
     )
 }
+
