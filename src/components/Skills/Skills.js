@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 import { Stack, Row, Col, ProgressBar, Container} from 'react-bootstrap';
 import { ReactComponent as LeftSvg } from './littlegirl.svg';
-import LogoList from '../props/LogoList';
+import LogoList from '../../props/LogoList';
 import './Skills.css'; 
 
 export default function Skills() {
@@ -50,14 +50,14 @@ export default function Skills() {
           </Col>
           <Col xs={12} md={12} lg={7} ref={progressRef}>
             <h3 style={{paddingBottom:15}}>Skills</h3>
-            {skillsList.map((item) => 
-              <>
-              <Stack direction='horizontal' style={{ alignItems: "center", marginBottom: 15 }}>
+            {skillsList.map((item, index) => 
+              <div key={index}>
+              <Stack  direction='horizontal' style={{ alignItems: "center", marginBottom: 15 }}>
                 <p style={{ marginBottom: 0, marginRight: 10 }}>{item.title}</p>
                 <LogoList type={item.list} />
               </Stack>
               <ProgressBar now={item.bar} variant="info" style={{ marginBottom: 20 }} />
-              </>
+              </div>
             )}
           </Col>
         </Container>

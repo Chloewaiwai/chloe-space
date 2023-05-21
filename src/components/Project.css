@@ -19,6 +19,18 @@
     background-color: #4e4e58;
 }
 
+.projectCard {
+    cursor: pointer;
+}
+
+/* Modal Style */
+
+.overlay_project{
+    height: 300px;
+}
+
+/* Responsive Web */
+
 @media (max-width: 1200px){
     .projectCard {
         width: 35rem !important;

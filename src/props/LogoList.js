@@ -76,28 +76,28 @@ export default function LogoList({type}) {
     return (
         <div style={{ display: "flex" }}>
             {filteredLogo.map((item, index) => {
-            switch (item.type) {
-                case "frontend":
-                    return (
-                        <>
-                        {item.title && <SkillsTag index={index} item={item} />}
-                        {item.src && <SkillsLogo index={index} item={item} />}
-                        </>
-                    );
-                case "software":
-                    return <SkillsLogo index={index} item={item} />;
-                case "ai":
-                    return <SkillsTag index={index} item={item} />;
-                case "design":
-                    return (
-                        <>
-                        {item.title && <SkillsTag index={index} item={item} />}
-                        {item.src && <SkillsLogo index={index} item={item} />}
-                        </>
-                    );
+                switch (item.type) {
+                    case "frontend":
+                        return (
+                            <React.Fragment key={index}>
+                                {item.title && <SkillsTag index={index} item={item} />}
+                                {item.src && <SkillsLogo index={index} item={item} />}
+                            </React.Fragment>
+                        );
+                    case "software":
+                        return <SkillsLogo key={index} index={index} item={item} />;
+                    case "ai":
+                        return <SkillsTag key={index} index={index} item={item} />;
+                    case "design":
+                        return (
+                            <React.Fragment key={index}>
+                                {item.title && <SkillsTag index={index} item={item} />}
+                                {item.src && <SkillsLogo index={index} item={item} />}
+                            </React.Fragment>
+                        );
                     default:
-                    return null;
-            }
+                        return null;
+                }
             })}
         </div>
     )
