@@ -16,7 +16,7 @@ export default function ProjectsCard({project}) {
             <Card
                 className='projectCard'
                 style={{
-                    width: project.width === "long" ? "35rem" : "25rem",
+                    width: project.width === "long" ? "40rem" : "30rem",
                     height:"13rem",
                     backgroundColor:"white",
                     overflow:"hidden"}}
@@ -42,8 +42,7 @@ export default function ProjectsCard({project}) {
                 </Card.Body>
             </Card>
         </motion.div>
-        <ProjectModal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} project={project}/>
-        
+        <ProjectModal show={modalIsOpen} onHide={() => setModalIsOpen(false)} project={project}/>
         </>
     )
 }
