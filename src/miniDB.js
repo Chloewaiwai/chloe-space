@@ -26,8 +26,8 @@ const projects = [
     description: 'A model that referenced to my room.',
     width: "long",
     application: "Made with Blender",
-    img: "/3Droom.png",
-    imgList: ["/3Droom1.png", "/3Droom2.png", "/3Droom3.png"]
+    img: "/myroom/myroom_pink.png",
+    imgList: ["/myroom/myroom_pink.png", "/myroom/myroom_pink2.png", "/myroom/myroom_pink3.png"]
   },
   {
     id: 4,
@@ -46,7 +46,6 @@ const projects = [
     description: 'A blockchain system with dynamic difficulty and Proof-of-Work algorithm',
     width: "short",
     application: "Made with JavaScript",
-    imgList: ["/blockchain1.png", "/blockchain2.png", "/blockchain3.png"]
   },
   {
     id: 6,

@@ -23,7 +23,8 @@ export default function ProjectModal(props) {
     <Container>
           <Row>
             <Col xs={12} md={12} lg={8}>
-              <ProjectCarousel projectimgs={project.imgList} />
+              {project.imgList && <ProjectCarousel projectimgs={project.imgList} />}
+              
             </Col>
             <Col xs={12} md={12} lg={4}>
               .col-xs-6 .col-md-4
