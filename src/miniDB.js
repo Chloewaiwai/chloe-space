@@ -7,7 +7,8 @@ const projects = [
     width: "short",
     application: "Made with Blender",
     img: "/teddy/teddy.png",
-    imgList: ["/teddy/teddy.png", "/teddy/teddy-right.png", "/teddy/teddy-left.png"]
+    imgList: ["/teddy/teddy.png", "/teddy/teddy-right.png", "/teddy/teddy-left.png"],
+    detailDesc: "TEDDY is built with Blender and is used as the character or chatting object for my final year project — an empathetic chatbot. \n \n Designed for children, it engages in interactive conversations and expresses emotions through body movements. \n \nIts lifelike responses create an immersive and captivating experience, forging a deep connection with the child."
   },
   {
     id: 2,
@@ -46,6 +47,7 @@ const projects = [
     description: 'A blockchain system with dynamic difficulty and Proof-of-Work algorithm',
     width: "short",
     application: "Made with JavaScript",
+    imgList: ["/blockchain/blockchain1.png", "/blockchain/blockchain2.png"]
   },
   {
     id: 6,

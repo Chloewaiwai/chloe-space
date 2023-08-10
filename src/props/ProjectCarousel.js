@@ -9,9 +9,10 @@ export default function ProjectCarousel({projectimgs}) {
       return (
         <Carousel.Item key={index}>
           <img
-            className="d-block w-100"
+            className="d-block"
             src={imageUrl}
             alt={`Slide ${index + 1}`}
+            style={{width:"85%"}}
           />
         </Carousel.Item>
       );

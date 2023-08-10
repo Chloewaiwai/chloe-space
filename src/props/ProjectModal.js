@@ -24,10 +24,11 @@ export default function ProjectModal(props) {
           <Row>
             <Col xs={12} md={12} lg={8}>
               {project.imgList && <ProjectCarousel projectimgs={project.imgList} />}
-              
             </Col>
-            <Col xs={12} md={12} lg={4}>
-              .col-xs-6 .col-md-4
+            <Col xs={12} md={12} lg={4} style={{display: "flex", alignContent: "center", flexWrap: "wrap"}}>
+              <div style={{ whiteSpace: 'pre-line' }}>
+                {project.detailDesc}
+              </div>
             </Col>
           </Row>
 
